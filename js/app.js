@@ -30,3 +30,10 @@ const teamMembers = [
         foto: 'barbara-ramos-graphic-designer.jpg',
     },
 ]
+
+for (let i = 0; i < teamMembers.length; i++) {
+    console.log(teamMembers[i]);
+}
+
+
+
