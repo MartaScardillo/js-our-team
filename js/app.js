@@ -29,11 +29,25 @@ const teamMembers = [
         ruolo: 'Graphic Designer',
         foto: 'barbara-ramos-graphic-designer.jpg',
     },
-]
+];
+
+const rowDOMElement = document.querySelector('.row');
+console.log(rowDOMElement);
 
 for (let i = 0; i < teamMembers.length; i++) {
     console.log(teamMembers[i]);
+    const teamMember = teamMembers[i];
+
+    const html = `
+        <div class="col-4">                  
+            <div class="card mb-4">
+                <img src="./img/${teamMember.foto}" class="card-img-top" />
+                <div class="card-body">
+                    <h5 class="card-title">${teamMember.nome}</h5>
+                    <p class="card-text">${teamMember.ruolo}</p>
+                </div>
+            </div>
+        </div>`;
+
+    rowDOMElement.innerHTML += html
 }
-
-
-
